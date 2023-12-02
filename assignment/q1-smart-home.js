@@ -7,22 +7,46 @@
 */
 
 // Task: Add code here
+class BaseSignal {
+    constructor() {
+        if (this.constructor.name === "BaseSignal") {
+            throw new Error("This class is not substantiated");
+        }
+    }
+
+    send() {
+        console.log("Sending Base Signal")
+    }
+}
 
 class TvSignal extends BaseSignal {
     constructor(){
-        // Add code here
+        super();
+    }
+
+    send() {
+        console.log("Sending tv signal")
     }
 }
 
 class AirconSignal extends BaseSignal {
     constructor(){
-        // Add code here
+        super();
+    }
+
+    send() {
+        console.log("Sending aircon signal")
     }
 }
 
 class DoorSignal extends BaseSignal {
     constructor(){
         // Add code here
+        super();
+    }
+
+    send() {
+        console.log("Sending door signal")
     }
 }
 
